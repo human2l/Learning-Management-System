@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+/Users/human2l/Documents/java-study/lms/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3557859760.index
+/lms/src/main/resources

@@ -1,0 +1,6 @@
+package com.kaiqiu.lms.repository.copy;
+// package com.kaiqiu.lms.repository;
+//
+// public class XXRepository extends JpaRepository<Course, Long> {
+//
+// }

@@ -1,0 +1,5 @@
+package com.kaiqiu.lms.enums.copy;
+
+public enum XXEnum {
+
+}

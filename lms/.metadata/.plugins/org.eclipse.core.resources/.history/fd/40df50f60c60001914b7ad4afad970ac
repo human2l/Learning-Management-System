@@ -1,0 +1,5 @@
+package com.kaiqiu.lms.dao.copy;
+
+public interface UserDao {
+
+}

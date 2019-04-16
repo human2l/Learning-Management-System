@@ -1,0 +1,86 @@
+<div class="row">
+    <div class="col-md-12">
+        <div ba-panel ba-panel-title="Add a new course" ba-panel-class="with-scroll">
+            <ba-wizard>
+                <ba-wizard-step title="Course" form="vm.courseForm">
+                    <form name="vm.courseForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="form-group has-feedback" ng-class="{'has-error': vm.courseForm.title.$invalid && (vm.courseForm.title.$dirty || vm.courseForm.$submitted)}">
+                                    <label for="courseTitle">Title</label>
+                                    <input type="text" class="form-control" id="courseTitle" name="title" placeholder="Title" ng-model="vm.course.title" required>
+                                    <span class="help-block error-block basic-block">Title Required</span>
+                                </div>
+                                <div class="form-group" ng-class="{'has-error': vm.courseForm.description.$invalid && (vm.courseForm.description.$dirty || vm.courseForm.$submitted)}">
+                                    <label for="courseDescription">Description</label>
+                                    <textarea class="form-control" id="courseDescription" name="description" placeholder="Description" ng-model="vm.course.description"
+                                        required></textarea>
+                                    <span class="help-block error-block basic-block">Description required</span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </ba-wizard-step>
+                <ba-wizard-step title="Course Details" form="vm.courseDetailsForm">
+                    <form name="vm.courseDetailsForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="category">Category</label>
+                                    <select class="form-control" id="category" title="Category" selectpicker>
+                                        <option selected>Html</option>
+                                        <option>Javascript</option>
+                                        <option>Java</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="courseDuration">Course Duration</label>
+                                    <input type="text" class="form-control" id="courseDuration" name="courseDuration" placeholder="0" ng-model="courseDuration"
+                                        readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-6" ng-class="{'has-error': vm.courseDetailsForm.startDate.$invalid &&  vm.courseDetailsForm.$submitted}">
+                                <label>Start date:</label>
+                                <p class="input-group">
+
+                                    <input name="startDate" type="text" class="form-control" uib-datepicker-popup="{{vm.startDate.format}}" datepicker-options="startDateOptions"
+                                        ng-model="startDate.dt" is-open="startDatePicker.opened" ng-required="true" close-text="Close"
+                                        alt-input-formats="altInputFormats" show-button-bar="false" placeholder="{{vm.startDate.format}}"
+                                        ng-readonly="true" max="maxDate" required/>
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="openDatePicker('start')">
+                                            <i class="glyphicon glyphicon-calendar"></i>
+                                        </button>
+                                    </span>
+                                    
+                                </p>
+                                <span class="help-block error-block basic-block">Start date required</span>
+                            </div>
+                            <div class="col-md-6" ng-class="{'has-error': vm.courseDetailsForm.endDate.$invalid &&  vm.courseDetailsForm.$submitted}">
+                                <label>End date:</label>
+                                <p class="input-group">
+                                    <input name="endDate" type="text" class="form-control" uib-datepicker-popup="{{vm.endDate.format}}" datepicker-options="endDateOptions"
+                                        ng-model="endDate.dt" is-open="endDatePicker.opened" ng-required="true" close-text="Close"
+                                        alt-input-formats="altInputFormats" show-button-bar="false" placeholder="{{vm.endDate.format}}"
+                                        ng-readonly="true" required/>
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="openDatePicker('end')">
+                                            <i class="glyphicon glyphicon-calendar"></i>
+                                        </button>
+                                    </span>
+                                </p>
+                                <span class="help-block error-block basic-block">End date required</span>
+                            </div>
+                        </div>
+                    </form>
+                </ba-wizard-step>
+
+                <ba-wizard-step title="Finish">
+                    <form class="form-horizontal" name="vm.finishForm" novalidate>
+                        Congratulations! You have successfully added a new course!
+                    </form>
+                </ba-wizard-step>
+            </ba-wizard>
+        </div>
+    </div>
+</div>

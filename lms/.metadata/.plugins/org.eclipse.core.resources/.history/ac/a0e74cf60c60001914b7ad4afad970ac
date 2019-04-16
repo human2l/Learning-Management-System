@@ -1,0 +1,11 @@
+package com.kaiqiu.lms.model.copy;
+// package com.kaiqiu.lms.model;
+//
+// import javax.persistence.Entity;
+// import javax.persistence.Table;
+//
+// @Entity
+// @Table
+// public class User {
+//
+// }

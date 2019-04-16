@@ -1,0 +1,2 @@
+127.0.0.1 - - [16/Apr/2019:16:06:59 +1000] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [16/Apr/2019:16:06:59 +1000] "GET /lms/WEB-INF/classes/com/kaiqiu/lms/LMSApplication.java HTTP/1.1" 404 1047

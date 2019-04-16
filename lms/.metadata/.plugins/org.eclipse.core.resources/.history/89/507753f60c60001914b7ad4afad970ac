@@ -1,0 +1,5 @@
+package com.kaiqiu.lms.constants.copy;
+
+public interface XXConstants {
+
+}

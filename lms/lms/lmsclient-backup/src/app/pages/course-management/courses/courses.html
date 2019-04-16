@@ -1,0 +1,20 @@
+<div class="col-md-4" ng-repeat="dummy in dummies">
+    <div style="height:100%" class="panel" ng-class="renderPanelColor($index)">
+        <div class="panel-heading">{{$index}}</div>
+        <div class="panel-body">
+            <p>{{dummy.content}}</p>
+        </div>
+        <div class="panel-footer">
+            <a href="#">See details</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="panel">
+        <div class="panel-body">
+            <a href="">Add new</a>
+        </div>
+    </div>
+</div>
+
+<!-- .panel-primary, success,info,warning,danger -->
