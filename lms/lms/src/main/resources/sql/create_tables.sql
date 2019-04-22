@@ -41,9 +41,9 @@ CREATE TABLE `student` (
   `mobile` varchar(45) DEFAULT NULL,
   `course_id` int(11) DEFAULT NULL,
   `lesson_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
   KEY `FK_COURSE_idx` (`course_id`),
-  CONSTRAINT `FK_COURSE` FOREIGN KEY (`course_id`) 
+  CONSTRAINT `FK_COURSE_S` FOREIGN KEY (`course_id`) 
   REFERENCES `course` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
@@ -68,10 +68,10 @@ CREATE TABLE `lesson` (
   `end_date` DATE DEFAULT NULL,
   `course_id` int(11) DEFAULT NULL,
   `tutor_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
   KEY `FK_COURSE_idx` (`course_id`),
-  CONSTRAINT `FK_COURSE` FOREIGN KEY (`course_id`) 
-  REFERENCES `course` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `FK_COURSE_L` FOREIGN KEY (`course_id`) 
+  REFERENCES `course` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   KEY `FK_TUTOR_idx` (`tutor_id`),
   CONSTRAINT `FK_TUTOR` FOREIGN KEY (`tutor_id`) 
   REFERENCES `tutor` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
